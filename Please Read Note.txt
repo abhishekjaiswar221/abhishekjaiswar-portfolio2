@@ -1,0 +1,10 @@
+Choose font from google fonts and implement in the app referring the shadcn/ui installation in next js page
+Fonts:
+Yatra One
+Raleway
+PT Mono
+Noto Sans
+Inter
+Inconsolata
+Fira Mono
+Andika
