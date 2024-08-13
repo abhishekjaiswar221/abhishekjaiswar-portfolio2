@@ -9,7 +9,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+// import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -68,7 +68,7 @@ export default function HeaderNavigation() {
           <Button>Contact</Button>
         </Link>
       </div>
-      <Sheet>
+      {/* <Sheet>
         <SheetTrigger asChild className="w-full flex justify-end items-center">
           <div className="w-full md:hidden">
             <Button variant="outline" size="icon">
@@ -113,7 +113,7 @@ export default function HeaderNavigation() {
             </li>
           </ul>
         </SheetContent>
-      </Sheet>
+      </Sheet> */}
     </header>
   );
 }

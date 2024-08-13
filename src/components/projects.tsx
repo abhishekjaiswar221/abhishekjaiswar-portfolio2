@@ -16,8 +16,7 @@ const projects = [
     title: "The Shopping Booth",
     description:
       "The Shopping Booth is an API based ecommerce website which uses dummyjson’s fake API to display various products.Built using React Js, Javascript, Redux Tookit and ShadCN UI",
-    image:
-      "/photo-1527195694714-9b939fac3432?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGdyZWVuZXJ5fGVufDB8fDB8fHww",
+    image: "/images/jetbrains.jpg",
     website: "https://abhishekjaiswar.pages.dev",
     github: "https://github.com/abhishekjaiswar221/the-shopping-booth",
     visibility: "public",
@@ -26,8 +25,7 @@ const projects = [
     title: "Taskify Cloud Todo",
     description:
       "Takify Cloud Todo is a task management web application.Built using React Js, Tailwind CSS, ShadCN UI, Node Js and Express Js.",
-    image:
-      "/photo-1504198266287-1659872e6590?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGdyZWVuZXJ5fGVufDB8fDB8fHww",
+    image: "/images/preview.png",
     website: "https://abhishekjaiswar.pages.dev",
     github: "https://github.com/abhishekjaiswar221",
     visibility: "public",
@@ -36,8 +34,7 @@ const projects = [
     title: "The Annapurnas",
     description:
       "The Annapurnas is an application for ordering tiffin, with a three-day trial and monthly subscription option. It is built using HTML, CSS, Bootstrap 5, JQuery, Java, JSP, Servlet,JDBC, and MySQL .",
-    image:
-      "/photo-1504198266287-1659872e6590?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGdyZWVuZXJ5fGVufDB8fDB8fHww",
+    image: "/images/webstorm.png",
     website: "https://abhishekjaiswar.pages.dev",
     github: "https://github.com/abhishekjaiswar221",
     visibility: "public",

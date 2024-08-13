@@ -1,4 +1,4 @@
-// import HeaderNavigation from "@/components/headerNavigation";
+import HeaderNavigation from "@/components/headerNavigation";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
 import Image from "next/image";
@@ -41,7 +41,9 @@ export default function Home() {
           priority
         />
       </div> */}
-      <section id="nav">{/* <HeaderNavigation /> */}</section>
+      <section id="nav">
+        <HeaderNavigation />
+      </section>
       <section id="hero">
         <Hero />
       </section>
