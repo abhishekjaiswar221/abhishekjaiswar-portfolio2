@@ -42,9 +42,6 @@ export default function Home() {
           priority
         />
       </div> */}
-      <section id="nav">
-        <HeaderNavigation />
-      </section>
       <section id="hero">
         <Hero />
       </section>
@@ -122,9 +119,6 @@ export default function Home() {
       </section>
       <section id="projects">
         <Projects />
-      </section>
-      <section id="footer-navigation">
-        <FooterNavigation />
       </section>
     </main>
   );

@@ -2,7 +2,7 @@ import { Instagram, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-export default function Footer() {
+export default function FooterNavigation() {
   return (
     <footer
       className="px-4 md:container py-12 align-bottom mt-auto"
