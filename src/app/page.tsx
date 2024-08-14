@@ -1,3 +1,4 @@
+import FooterNavigation from "@/components/footerNavigation";
 import HeaderNavigation from "@/components/headerNavigation";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
@@ -121,6 +122,9 @@ export default function Home() {
       </section>
       <section id="projects">
         <Projects />
+      </section>
+      <section id="footer-navigation">
+        <FooterNavigation />
       </section>
     </main>
   );
