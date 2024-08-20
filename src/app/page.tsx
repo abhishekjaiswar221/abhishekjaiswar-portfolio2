@@ -48,14 +48,20 @@ export default function Home() {
       </section>
       <section
         id="projects"
-        className="flex flex-col gap-5 md:flex-row items-center justify-between w-full"
+        className="flex flex-col gap-4 md:flex-row items-center justify-between w-full"
       >
+        <h3 className="md:hidden scroll-m-20 text-2xl font-semibold tracking-tight">
+          Projects
+        </h3>
         <Projects />
       </section>
       <section
         id="work"
         className="mx-auto md:grid-cols-2 grid lg:grid-cols-3 w-full gap-4 md:pb-8 lg:pb-20"
       >
+        <h3 className="md:hidden text-center scroll-m-20 text-2xl font-semibold tracking-tight">
+          Some of my work
+        </h3>
         <Work />
       </section>
     </main>

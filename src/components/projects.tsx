@@ -46,7 +46,10 @@ export default function Projects() {
   return (
     <>
       {data.map(({ id, title, description, tech1, tech2 }) => (
-        <Card key={id} className="shadow-none h-60 w-96 relative">
+        <Card
+          key={id}
+          className="shadow-none h-56 w-full md:w-56 lg:h-60 lg:w-96 relative"
+        >
           <CardHeader className="flex flex-row items-center justify-start gap-2 space-y-0 p-4">
             <div>
               <Button
