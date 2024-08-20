@@ -9,17 +9,24 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { MenuIcon } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export default function HeaderNavigation() {
   return (
-    <header className="flex items-center py-4 px-4 md:container w-full">
+    <header className="w-full flex bg-white gap-10 items-center justify-center p-4 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
       <div className="w-full justify-start items-center">
         <Link href="/" className="flex items-center">
           <h3 className="text-lg font-semibold tracking-tight">
-            Abhishek D Jaiswar
+            Abhishek Jaiswar
           </h3>
         </Link>
       </div>
@@ -63,21 +70,31 @@ export default function HeaderNavigation() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="w-full justify-end items-center hidden md:flex">
+      {/* <div className="w-full justify-end items-center hidden md:flex">
         <Link href="/contact">
           <Button>Contact</Button>
         </Link>
-      </div>
+      </div> */}
       <Sheet>
         <SheetTrigger asChild className="w-full flex justify-end items-center">
           <div className="w-full md:hidden">
-            <Button variant="outline" size="icon">
-              <MenuIcon className="h-6 w-6" />
-            </Button>
+            {/* <Button variant="outline" size="icon"> */}
+            <Menu size={22} strokeWidth={1.5} />
+            {/* </Button> */}
           </div>
         </SheetTrigger>
 
         <SheetContent className="w-full">
+          <VisuallyHidden>
+            <SheetTitle
+              aria-describedby="Menu"
+              className="text-lg font-semibold tracking-tight"
+            >
+              Abhishek D Jaiswar
+            </SheetTitle>
+            <SheetDescription>Header Navigation</SheetDescription>
+          </VisuallyHidden>
+
           <SheetTrigger asChild>
             <Link className="flex items-center gap-2" href="/">
               <h3 className="text-lg font-semibold tracking-tight">

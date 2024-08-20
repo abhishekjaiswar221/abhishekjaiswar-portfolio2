@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col h-screen lg:h-fit justify-center gap-5 lg:pb-4 py-auto lg:pt-28">
+    <section className="flex flex-col h-screen lg:h-fit justify-center gap-5 lg:pb-4 py-auto lg:pt-48">
       {/* <Badge className="my-2" variant="secondary">
         Website in development
       </Badge> */}
@@ -62,8 +62,8 @@ export default function Hero() {
         </div>
         <div>
           <Image
-            className="rounded-full"
-            src={"/images/photo.jpg"}
+            className="rounded-full border-2 p-1 border-gray-400"
+            src={"/images/profile-picture.png"}
             width={150}
             height={150}
             alt="Photo"
