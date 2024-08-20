@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const runtime = "edge";
 
 export const metadata: Metadata = {
-  title: "Abhishek Jaiswar Portfolio",
-  description: "My Personal Portfolio",
+  title: "Abhishek Jaiswar",
+  description: "Personal Portfolio",
 };
 
 export default function RootLayout({

@@ -1,73 +1,88 @@
-"use client";
-
+import React from "react";
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import Image from "next/image";
+} from "./ui/card";
 import { Button } from "./ui/button";
-import { Github, Link as LinkIcon } from "lucide-react";
-import Link from "next/link";
-// import { Badge } from "./ui/badge";
+import { ArrowUpRight, Github } from "lucide-react";
 
-const projects = [
+interface Data {
+  id: number;
+  title: string;
+  description: string;
+  tech1: string;
+  tech2: string;
+}
+
+const data: Array<Data> = [
   {
-    title: "The Shopping Booth",
-    description:
-      "The Shopping Booth is an API based ecommerce website which uses dummyjson’s fake API to display various products.Built using React Js, Javascript, Redux Tookit and ShadCN UI",
-    image: "/images/jetbrains.jpg",
-    website: "https://abhishekjaiswar.pages.dev",
-    github: "https://github.com/abhishekjaiswar221/the-shopping-booth",
-    visibility: "public",
+    id: 1,
+    title: "web development",
+    description: "This is description",
+    tech1: "React",
+    tech2: "Shadcn/ui",
   },
   {
-    title: "Taskify Cloud Todo",
-    description:
-      "Takify Cloud Todo is a task management web application.Built using React Js, Tailwind CSS, ShadCN UI, Node Js and Express Js.",
-    image: "/images/preview.png",
-    website: "https://abhishekjaiswar.pages.dev",
-    github: "https://github.com/abhishekjaiswar221",
-    visibility: "public",
+    id: 2,
+    title: "web development",
+    description: "This is description",
+    tech1: "React",
+    tech2: "Shadcn/ui",
   },
   {
-    title: "The Annapurnas",
-    description:
-      "The Annapurnas is an application for ordering tiffin, with a three-day trial and monthly subscription option. It is built using HTML, CSS, Bootstrap 5, JQuery, Java, JSP, Servlet,JDBC, and MySQL .",
-    image: "/images/webstorm.png",
-    website: "https://abhishekjaiswar.pages.dev",
-    github: "https://github.com/abhishekjaiswar221",
-    visibility: "public",
+    id: 3,
+    title: "web development",
+    description: "This is description",
+    tech1: "React",
+    tech2: "Shadcn/ui",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="mx-auto md:grid-cols-2 grid lg:grid-cols-3 w-full gap-4 md:pb-8 lg:pb-20">
-      {projects.map((project, index) => (
-        <Card key={index} className="w-full flex flex-col justify-between">
-          <CardHeader>
-            <CardTitle>{project.title}</CardTitle>
-            <CardDescription>{project.description}</CardDescription>
+    <>
+      {data.map(({ id, title, description, tech1, tech2 }) => (
+        <Card
+          key={id}
+          className="shadow-none h-56 w-full md:w-56 lg:h-60 lg:w-96 relative"
+        >
+          <CardHeader className="flex flex-row items-center justify-start gap-2 space-y-0 p-4">
             <div>
-              {/* <Badge variant="secondary" className="w-fit capitalize mt-2">
-                {project.visibility}
-              </Badge> */}
+              <Button
+                className="rounded-full w-fit shadow-none border-gray-300"
+                variant={"outline"}
+              >
+                {tech1}
+              </Button>
+            </div>
+            <div>
+              <Button
+                className="rounded-full w-fit shadow-none border-gray-300"
+                variant={"outline"}
+              >
+                {tech2}
+              </Button>
             </div>
           </CardHeader>
-          <CardContent>
-            <Image
-              src={project.image}
-              alt="Project"
-              width={128}
-              height={128}
-              className="rounded-lg w-full aspect-[3/2] object-cover"
-            />
+          <CardContent className="p-4">
+            <CardTitle>{title}</CardTitle>
+            <CardDescription>{description}</CardDescription>
           </CardContent>
+          <CardFooter className="flex items-center justify-end gap-1 absolute bottom-0 w-full p-4">
+            <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
+              <Github size={18} strokeWidth={1.5} />
+            </div>
+            <div></div>
+            <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
+              <ArrowUpRight size={18} strokeWidth={1.5} />
+            </div>
+          </CardFooter>
         </Card>
       ))}
-    </section>
+    </>
   );
 }

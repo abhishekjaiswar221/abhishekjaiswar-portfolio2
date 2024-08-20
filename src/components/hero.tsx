@@ -1,22 +1,13 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Github } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 // import { Badge } from "./ui/badge";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex flex-col justify-center gap-5 lg:gap-12 xl:gap-16 py-8 md:py-12 md:pb-8 lg:py-28 lg:pb-20">
+    <section className="flex flex-col h-screen lg:h-fit justify-center gap-5 lg:pb-4 py-auto lg:pt-28">
       {/* <Badge className="my-2" variant="secondary">
         Website in development
       </Badge> */}
@@ -53,15 +44,21 @@ export default function Hero() {
           </Button>
         </Link>
       </div> */}
-      <div className="flex lg:flex-row flex-col-reverse items-center lg:items-start w-full lg:w-4/5 xl:w-3/4 justify-center gap-4">
+      <div className="flex flex-col-reverse items-center justify-center gap-4 lg:flex-row lg:items-start w-full lg:w-4/5 xl:w-3/4">
         <div className="space-y-4 text-center lg:text-start">
           <p className="scroll-m-20 text-3xl lg:text-4xl font-medium tracking-tight xl:text-5xl">
             Hola, I&apos;m Abhishek 👋
           </p>
           <p className="scroll-m-20 md:text-lg tracking-tight xl:text-xl">
-            Frontend Developer, with expiries in React and node pushing for
-            FullStack with Node,Go and Docker
+            A Frontend Developer,with expertise in frontend frameworks like
+            React Js and Next Js.
+            <br></br> <span>I transform ideas into stunning realities</span>
           </p>
+          {/* <p>
+            Bold and Confident Headline: Your Vision, My Code Subheadline: I
+            transform ideas into stunning realities. Call to Action: View My
+            Work
+          </p> */}
         </div>
         <div>
           <Image
@@ -73,126 +70,44 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between w-full">
-        <div className="basis-52 lg:basis-64 xl:basis-[300px]">
-          <Card className="shadow-none h-52 lg:h-64 xl:h-[300px] relative">
-            <CardHeader className="flex flex-row items-center justify-start gap-2 space-y-0 p-4">
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  React Js
-                </Button>
-              </div>
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  Shadcn/ui
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent className="p-4">
-              <CardTitle>Full Web Development</CardTitle>
-              <CardDescription>Card Description</CardDescription>
-            </CardContent>
-            <CardFooter className="flex items-center justify-between absolute bottom-0 w-full p-4">
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  Github
-                </Button>
-              </div>
-              <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
-                <ArrowUpRight size={18} strokeWidth={1.5} />
-              </div>
-            </CardFooter>
-          </Card>
-        </div>
 
-        <div className="basis-52 sm:basis-60 lg:basis-[340px] xl:basis-[550px]">
-          <Card className="shadow-none h-52 lg:h-64 xl:h-[300px] relative">
-            <CardHeader className="flex flex-row items-center justify-start gap-2 space-y-0 p-4">
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  React Js
-                </Button>
-              </div>
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  Shadcn/ui
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent className="p-4">
-              <CardTitle>Card Title</CardTitle>
-              <CardDescription>Card Description</CardDescription>
-            </CardContent>
-            <CardFooter className="flex items-center justify-between absolute bottom-0 w-full p-4">
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  Github
-                </Button>
-              </div>
-              <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
-                <ArrowUpRight size={18} strokeWidth={1.5} />
-              </div>
-            </CardFooter>
-          </Card>
-        </div>
-
-        <div className="basis-52 lg:basis-64 xl:basis-[300px]">
-          <Card className="shadow-none h-52 lg:h-64 xl:h-[300px] relative">
-            <CardHeader className="p-4 flex flex-row items-center justify-start gap-2 space-y-0">
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  React Js
-                </Button>
-              </div>
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  Shadcn/ui
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent className="p-4">
-              <CardTitle>Card Title</CardTitle>
-              <CardDescription>Card Description</CardDescription>
-            </CardContent>
-            <CardFooter className="p-4 flex items-center justify-between absolute bottom-0 w-full">
-              <div>
-                <Button
-                  className="rounded-full w-fit shadow-none border-gray-300"
-                  variant={"outline"}
-                >
-                  Github
-                </Button>
-              </div>
-              <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
-                <ArrowUpRight size={18} strokeWidth={1.5} />
-              </div>
-            </CardFooter>
-          </Card>
-        </div>
+      <div className="flex flex-row items-center pt-6 gap-5 justify-center lg:justify-start">
+        <Link
+          href={"http://github.com/abhishekjaiswar221"}
+          className="h-10 w-10 rounded-full border-2   flex items-center justify-center"
+        >
+          <Github size={18} strokeWidth={1.5} />
+        </Link>
+        <Link
+          href={"http://github.com/abhishekjaiswar221"}
+          className="h-10 w-10 rounded-full border-2   flex items-center justify-center"
+        >
+          <Linkedin size={18} strokeWidth={1.5} />
+        </Link>
+        <Link
+          href={"http://github.com/abhishekjaiswar221"}
+          className="h-10 w-10 rounded-full border-2   flex items-center justify-center"
+        >
+          <Twitter size={18} strokeWidth={1.5} />
+        </Link>
+        {/* <Button
+          className="rounded-full w-fit shadow-none border-gray-300"
+          variant={"outline"}
+        >
+          Connect with me
+        </Button>
+        <Button
+          className="rounded-full w-fit shadow-none border-gray-300"
+          variant={"outline"}
+        >
+          Get in touch
+        </Button>
+        <Button
+          className="rounded-full w-fit shadow-none border-gray-300"
+          variant={"outline"}
+        >
+          Contact
+        </Button> */}
       </div>
     </section>
   );
