@@ -40,7 +40,7 @@ export default function HeaderNavigation() {
               asChild
               className={cn(navigationMenuTriggerStyle())}
             >
-              <Link href="/experience">Experience</Link>
+              <Link href="/experience">Work Experience</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           {/* Nav Items */}
@@ -93,7 +93,7 @@ export default function HeaderNavigation() {
             </li>
             <li>
               <SheetTrigger asChild>
-                <Link href="/experience">Experience</Link>
+                <Link href="/experience">Work Experience</Link>
               </SheetTrigger>
             </li>
             <li>
