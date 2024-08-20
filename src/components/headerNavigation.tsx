@@ -9,9 +9,16 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export default function HeaderNavigation() {
   return (
@@ -78,6 +85,16 @@ export default function HeaderNavigation() {
         </SheetTrigger>
 
         <SheetContent className="w-full">
+          <VisuallyHidden>
+            <SheetTitle
+              aria-describedby="Menu"
+              className="text-lg font-semibold tracking-tight"
+            >
+              Abhishek D Jaiswar
+            </SheetTitle>
+            <SheetDescription>Header Navigation</SheetDescription>
+          </VisuallyHidden>
+
           <SheetTrigger asChild>
             <Link className="flex items-center gap-2" href="/">
               <h3 className="text-lg font-semibold tracking-tight">
