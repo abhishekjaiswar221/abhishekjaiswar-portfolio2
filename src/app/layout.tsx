@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const runtime = "edge";
 
 export const metadata: Metadata = {
-  title: "Abhishek Jaiswar",
+  title: "Abhishek Jaiswar - Web Developer",
   description: "Personal Portfolio",
 };
 
@@ -41,8 +41,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-    // <html lang="en">
-    //   <body className={inter.className}>{children}</body>
-    // </html>
   );
 }
