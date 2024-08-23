@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import HeaderNavigation from "@/components/headerNavigation";
-import FooterNavigation from "@/components/footerNavigation";
+import HeaderNavigation from "@/components/layout/headerNavigation";
+import FooterNavigation from "@/components/layout/footerNavigation";
 import { cn } from "@/lib/utils";
 import NextTopLoader from "nextjs-toploader";
 

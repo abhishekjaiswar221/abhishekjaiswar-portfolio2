@@ -1,7 +1,7 @@
 "use client";
 
 import { Instagram, Github, Linkedin, Mail } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import Link from "next/link";
 
 export default function FooterNavigation() {
