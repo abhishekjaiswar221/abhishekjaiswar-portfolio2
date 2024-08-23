@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const TechCard = ({ iterableArray, cardTitle }: IterableArray) => {
   return (
-    <Card className="h-72 w-60">
+    <Card className="h-[270px] w-64">
       <CardHeader>
         <CardTitle className="text-center">{cardTitle}</CardTitle>
       </CardHeader>

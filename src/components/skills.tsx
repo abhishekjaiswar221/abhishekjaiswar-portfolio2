@@ -1,8 +1,9 @@
 import TechCard from "@/components/Card/techCard";
 import {
   frontendTechIcons,
-  devopsTechIcons,
-  backend_databaseTechIcons,
+  backend_devopsTechIcons,
+  othersTechIcons,
+  devToolsTechIcons,
 } from "@/data/data";
 
 const Skills = () => {
@@ -13,13 +14,23 @@ const Skills = () => {
           What I Know
         </h3>
       </div>
-      <div className="flex flex-col md:grid md:grid-cols-3 gap-10">
+      <div className="flex flex-col md:grid md:grid-cols-4 gap-10">
         <TechCard cardTitle={"Frontend"} iterableArray={frontendTechIcons} />
         <TechCard
-          cardTitle={"Backend & Database"}
-          iterableArray={backend_databaseTechIcons}
+          cardTitle={"Backend & DevOps"}
+          iterableArray={backend_devopsTechIcons}
         />
-        <TechCard cardTitle={"Devops"} iterableArray={devopsTechIcons} />
+        <TechCard cardTitle={"Dev Tools"} iterableArray={devToolsTechIcons} />
+        <TechCard cardTitle={"Others"} iterableArray={othersTechIcons} />
+        {/* <TechCard cardTitle={"DevOps"} iterableArray={devopsTechIcons} /> */}
+        {/* <TechCard
+          cardTitle={"Build & Linting Tools"}
+          iterableArray={build_lintingToolsTechIcons}
+        /> */}
+        {/* <TechCard
+          cardTitle={"Package Managers"}
+          iterableArray={packageManagersTechIcons}
+        /> */}
       </div>
     </section>
   );
