@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 const Hero: FC = () => {
   return (
-    <section className="flex flex-col h-screen lg:h-fit justify-center gap-5 lg:pb-4 py-auto lg:pt-48">
+    <section className="flex flex-col h-screen lg:h-fit justify-center gap-5 py-auto lg:pt-32">
       <div className="flex flex-col-reverse items-center justify-start gap-4 lg:flex-row lg:items-start w-full lg:w-4/5 xl:w-3/4">
         <div className="space-y-4 text-center lg:text-start">
           <p className="scroll-m-20 text-3xl lg:text-4xl font-medium tracking-tight xl:text-5xl">
@@ -33,7 +33,7 @@ const Hero: FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center pt-6 gap-5 justify-center lg:justify-start">
+      <div className="flex flex-row items-center pt-4 gap-5 justify-center lg:justify-start">
         <Link
           href={"http://github.com/abhishekjaiswar221"}
           className="h-10 w-10 rounded-full border-2 flex items-center justify-center"

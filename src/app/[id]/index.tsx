@@ -4,8 +4,8 @@ interface PageProps {
   [key: string]: any;
 }
 
-const Page: FC<PageProps> = (params) => {
+const Index: FC<PageProps> = (params) => {
   return <div>{JSON.stringify(params)}</div>;
 };
 
-export default Page;
+export default Index;
