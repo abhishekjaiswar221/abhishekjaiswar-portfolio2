@@ -1,9 +1,10 @@
+import React, { FC } from "react";
 import Hero from "@/components/hero";
 import Skills from "@/components/skills";
 import Projects from "@/components/projects";
 import MainProjects from "@/components/mainProjects";
 
-export default function Home() {
+const Home: FC = () => {
   return (
     <main className="flex min-h-screen flex-col gap-10 justify-center px-4 md:container lg:px-16 xl:px-24">
       <section id="hero">
@@ -20,4 +21,6 @@ export default function Home() {
       </section>
     </main>
   );
-}
+};
+
+export default Home;

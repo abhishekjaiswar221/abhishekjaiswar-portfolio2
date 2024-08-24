@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
-export const runtime = "edge";
+export const runtime: "edge" = "edge";
 
 export const metadata: Metadata = {
   title: "Abhishek Jaiswar - Web Developer",

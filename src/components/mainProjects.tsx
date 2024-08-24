@@ -1,7 +1,8 @@
+import { FC } from "react";
 import { MainProjectsType, mainProjects } from "@/data/data";
 import MainProjectCard from "./Card/mainProjectCard";
 
-export default function MainProjects() {
+const MainProjects: FC = () => {
   return (
     <section className="flex flex-col gap-4 md:flex-row items-center justify-between w-full">
       <div>
@@ -25,4 +26,6 @@ export default function MainProjects() {
       )}
     </section>
   );
-}
+};
+
+export default MainProjects;

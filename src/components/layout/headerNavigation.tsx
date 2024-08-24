@@ -1,5 +1,6 @@
 "use client";
 
+import React, { FC } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -20,7 +21,7 @@ import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-export default function HeaderNavigation() {
+const HeaderNavigation: FC = () => {
   return (
     <header className="w-full flex bg-white gap-10 items-center justify-center p-4 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
       <div className="w-full justify-start items-center">
@@ -32,7 +33,6 @@ export default function HeaderNavigation() {
       </div>
       <NavigationMenu className="w-full items-center justify-center hidden md:flex">
         <NavigationMenuList>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
@@ -41,7 +41,6 @@ export default function HeaderNavigation() {
               <Link href="/">Projects</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
@@ -50,7 +49,6 @@ export default function HeaderNavigation() {
               <Link href="/experience">Work Experience</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
@@ -59,7 +57,6 @@ export default function HeaderNavigation() {
               <Link href="/skills">Skills</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
@@ -133,4 +130,6 @@ export default function HeaderNavigation() {
       </Sheet>
     </header>
   );
-}
+};
+
+export default HeaderNavigation;

@@ -5,11 +5,6 @@ export interface TechIconType {
   altText: string;
 }
 
-export interface IterableArray {
-  cardTitle: string;
-  iterableArray: TechIconType[];
-}
-
 export const frontendTechIcons: Array<TechIconType> = [
   {
     id: 1,

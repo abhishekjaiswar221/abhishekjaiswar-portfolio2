@@ -8,15 +8,16 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Github } from "lucide-react";
+import { FC } from "react";
 import { MainProjectsType } from "@/data/data";
 
-const mainProjectCard = ({
+const mainProjectCard: FC<MainProjectsType> = ({
   id,
   title,
   description,
   tech1,
   tech2,
-}: MainProjectsType) => {
+}) => {
   return (
     <Card
       key={id}

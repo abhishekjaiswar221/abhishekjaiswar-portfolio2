@@ -1,3 +1,4 @@
+import React, { FC } from "react";
 import TechCard from "@/components/Card/techCard";
 import {
   frontendTechIcons,
@@ -6,7 +7,7 @@ import {
   devToolsTechIcons,
 } from "@/data/data";
 
-const Skills = () => {
+const Skills: FC = () => {
   return (
     <section className="flex flex-col items-center justify-center gap-10">
       <div>
