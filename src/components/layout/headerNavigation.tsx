@@ -23,7 +23,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const HeaderNavigation: FC = () => {
   return (
-    <header className="w-full flex bg-white gap-10 items-center justify-center p-4 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
+    <header className="w-full flex bg-white items-center justify-between py-4 px-6 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
       <div className="w-full justify-start items-center">
         <Link href="/" className="flex items-center">
           <h3 className="text-lg font-semibold tracking-tight">
@@ -46,7 +46,7 @@ const HeaderNavigation: FC = () => {
               asChild
               className={cn(navigationMenuTriggerStyle())}
             >
-              <Link href="/experience">Work Experience</Link>
+              <Link href="/work">Work</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -92,14 +92,14 @@ const HeaderNavigation: FC = () => {
             <SheetDescription>Header Navigation</SheetDescription>
           </VisuallyHidden>
 
-          <SheetTrigger asChild>
+          {/* <SheetTrigger asChild>
             <Link className="flex items-center gap-2" href="/">
               <h3 className="text-lg font-semibold tracking-tight">
                 Abhishek D Jaiswar
               </h3>
             </Link>
-          </SheetTrigger>
-          <ul className="flex flex-col items-center justify-center h-screen gap-3 mt-4">
+          </SheetTrigger> */}
+          <ul className="flex flex-col text-xl items-center justify-center h-screen gap-5">
             <li>
               <SheetTrigger asChild>
                 <Link href="/">Projects</Link>
@@ -107,7 +107,7 @@ const HeaderNavigation: FC = () => {
             </li>
             <li>
               <SheetTrigger asChild>
-                <Link href="/experience">Work Experience</Link>
+                <Link href="/work">Work</Link>
               </SheetTrigger>
             </li>
             <li>

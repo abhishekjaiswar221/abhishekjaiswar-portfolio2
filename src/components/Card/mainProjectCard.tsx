@@ -31,7 +31,7 @@ const MainProjectCard: FC<MainProjectsType> = ({
           className="w-full h-full object-cover"
         />
       </div>
-      <CardContent className="px-4 py-2">
+      <CardContent className="px-4 py-3">
         <CardTitle className="text-xl font-semibold">{title}</CardTitle>
         <div className="flex h-full items-center justify-between w-full p-0">
           <CardDescription>
