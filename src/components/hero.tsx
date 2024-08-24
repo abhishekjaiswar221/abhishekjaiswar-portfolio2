@@ -11,11 +11,13 @@ const Hero: FC = () => {
           <p className="scroll-m-20 text-3xl lg:text-4xl font-medium tracking-tight xl:text-5xl">
             Hola, I&apos;m Abhishek 👋
           </p>
-          <p className="scroll-m-20 md:text-lg tracking-tight xl:text-xl">
-            A Frontend Developer, with expertise in frontend frameworks like
-            React Js.
-            <br /> <span>I transform ideas into stunning realities.</span>
+          <p className="scroll-m-20 text-lg tracking-tight xl:text-xl">
+            I transform ideas into stunning realities
           </p>
+          <span className="scroll-m-20 md:text-lg tracking-tight xl:text-xl">
+            A Frontend Developer, with expertise in frontend frameworks like
+            React Js
+          </span>
           {/* <p>
             Bold and Confident Headline: Your Vision, My Code Subheadline: I
             transform ideas into stunning realities. Call to Action: View My
@@ -33,7 +35,7 @@ const Hero: FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center pt-4 gap-5 justify-center lg:justify-start">
+      <div className="flex flex-row items-center pt-10 lg:pt-4 gap-5 justify-center lg:justify-start">
         <Link
           href={"http://github.com/abhishekjaiswar221"}
           className="h-10 w-10 rounded-full border-2 flex items-center justify-center"
