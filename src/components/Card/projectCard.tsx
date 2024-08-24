@@ -8,7 +8,12 @@ import {
 import Image from "next/image";
 import { ProjectType } from "@/data/data";
 
-const ProjectCard = ({ id, title, description, imageSrc }: ProjectType) => {
+const ProjectCard: React.FC<ProjectType> = ({
+  id,
+  title,
+  description,
+  imageSrc,
+}) => {
   return (
     <Card key={id} className="w-full flex flex-col justify-between">
       <CardHeader>

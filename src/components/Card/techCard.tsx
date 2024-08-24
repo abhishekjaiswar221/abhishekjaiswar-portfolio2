@@ -1,10 +1,16 @@
 import Image from "next/image";
-import { TechIconType, IterableArray } from "@/data/data";
+import { TechIconType } from "@/data/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FC } from "react";
 
-const TechCard = ({ iterableArray, cardTitle }: IterableArray) => {
+interface TechCardProps {
+  iterableArray: Array<TechIconType>;
+  cardTitle: string;
+}
+
+const TechCard: FC<TechCardProps> = ({ iterableArray, cardTitle }) => {
   return (
-    <Card className="h-[270px] w-64">
+    <Card className="h-fit md:h-[270px] w-5/6 md:w-full shadow-none">
       <CardHeader>
         <CardTitle className="text-center">{cardTitle}</CardTitle>
       </CardHeader>

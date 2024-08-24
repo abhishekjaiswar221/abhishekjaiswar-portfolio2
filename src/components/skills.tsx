@@ -1,3 +1,4 @@
+import React, { FC } from "react";
 import TechCard from "@/components/Card/techCard";
 import {
   frontendTechIcons,
@@ -6,7 +7,7 @@ import {
   devToolsTechIcons,
 } from "@/data/data";
 
-const Skills = () => {
+const Skills: FC = () => {
   return (
     <section className="flex flex-col items-center justify-center gap-10">
       <div>
@@ -14,7 +15,7 @@ const Skills = () => {
           What I Know
         </h3>
       </div>
-      <div className="flex flex-col md:grid md:grid-cols-4 gap-10">
+      <div className="flex flex-col md:grid grid-cols-2 lg:grid-cols-4 gap-6 w-full place-items-center">
         <TechCard cardTitle={"Frontend"} iterableArray={frontendTechIcons} />
         <TechCard
           cardTitle={"Backend & DevOps"}

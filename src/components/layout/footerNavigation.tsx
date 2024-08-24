@@ -1,10 +1,9 @@
-"use client";
-
+import React, { FC } from "react";
 import { Instagram, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-export default function FooterNavigation() {
+const FooterNavigation: FC = () => {
   return (
     <footer
       className="px-4 md:container py-12 align-bottom mt-auto"
@@ -58,4 +57,6 @@ export default function FooterNavigation() {
       </ul>
     </footer>
   );
-}
+};
+
+export default FooterNavigation;

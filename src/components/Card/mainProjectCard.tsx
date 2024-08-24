@@ -2,58 +2,55 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Github } from "lucide-react";
+import { FC } from "react";
 import { MainProjectsType } from "@/data/data";
+import Image from "next/image";
 
-const mainProjectCard = ({
+const MainProjectCard: FC<MainProjectsType> = ({
   id,
   title,
   description,
   tech1,
   tech2,
-}: MainProjectsType) => {
+}) => {
   return (
     <Card
       key={id}
-      className="shadow-none h-56 w-full md:w-56 lg:h-60 lg:w-96 relative"
+      className="w-full mx-auto rounded-lg overflow-hidden shadow-none"
     >
-      <CardHeader className="flex flex-row items-center justify-start gap-2 space-y-0 p-4">
-        <div>
-          <Button
-            className="rounded-full w-fit shadow-none border-gray-300"
-            variant={"outline"}
-          >
+      <div className="relative h-52">
+        <Image
+          src="/projects/webstorm.png"
+          alt="Spotify Clone"
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <CardContent className="px-4 py-3">
+        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
+        <div className="flex h-full items-center justify-between w-full p-0">
+          <CardDescription>
+            {description}
             {tech1}
-          </Button>
-        </div>
-        <div>
-          <Button
-            className="rounded-full w-fit shadow-none border-gray-300"
-            variant={"outline"}
-          >
             {tech2}
-          </Button>
+          </CardDescription>
+          <div className="flex items-center justify-center gap-1">
+            <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
+              <Github size={18} strokeWidth={1.5} />
+            </div>
+            <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
+              <ArrowUpRight size={18} strokeWidth={1.5} />
+            </div>
+          </div>
         </div>
-      </CardHeader>
-      <CardContent className="p-4">
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
       </CardContent>
-      <CardFooter className="flex items-center justify-end gap-1 absolute bottom-0 w-full p-4">
-        <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
-          <Github size={18} strokeWidth={1.5} />
-        </div>
-        <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
-          <ArrowUpRight size={18} strokeWidth={1.5} />
-        </div>
-      </CardFooter>
     </Card>
   );
 };
 
-export default mainProjectCard;
+export default MainProjectCard;

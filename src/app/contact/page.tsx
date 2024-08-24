@@ -1,9 +1,8 @@
-"use client";
-
+import React, { FC } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function Page() {
+const Page: FC = () => {
   return (
     <main className="px-4 flex flex-col py-6 max-w-3xl mx-auto">
       <div>
@@ -40,4 +39,6 @@ export default function Page() {
       </div>
     </main>
   );
-}
+};
+
+export default Page;

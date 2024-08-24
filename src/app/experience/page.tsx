@@ -1,5 +1,4 @@
-"use client";
-
+import React, { FC } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,10 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { CircleIcon, StarIcon } from "@radix-ui/react-icons";
-
 import Link from "next/link";
 
-export default function Page() {
+const Page: FC = () => {
   return (
     <main className="px-4 flex flex-col py-6 max-w-3xl mx-auto w-full">
       <div>
@@ -30,7 +28,7 @@ export default function Page() {
       </div>
       <div className="mt-8">
         <ul className="flex flex-col items-center gap-4">
-          {[...Array(3)].map((_, index) => (
+          {[...Array(3)].map((_, index: number) => (
             <Card key={index}>
               <CardHeader>
                 <CardTitle>shadcn/ui</CardTitle>
@@ -58,4 +56,6 @@ export default function Page() {
       </div>
     </main>
   );
-}
+};
+
+export default Page;

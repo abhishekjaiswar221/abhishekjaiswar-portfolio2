@@ -1,22 +1,23 @@
-"use client";
-
+import React, { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, Twitter } from "lucide-react";
 
-export default function Hero() {
+const Hero: FC = () => {
   return (
-    <section className="flex flex-col h-screen lg:h-fit justify-center gap-5 lg:pb-4 py-auto lg:pt-48">
-      <div className="flex flex-col-reverse items-center justify-start gap-4 lg:flex-row lg:items-start w-full lg:w-4/5 xl:w-3/4">
-        <div className="space-y-4 text-center lg:text-start">
+    <section className="flex flex-col h-screen md:h-fit justify-center gap-5 py-auto md:pt-28 lg:pt-32">
+      <div className="flex flex-col-reverse items-center justify-start gap-4 md:flex-row md:items-start w-full lg:w-4/5 xl:w-3/4">
+        <div className="space-y-4 text-center md:text-start">
           <p className="scroll-m-20 text-3xl lg:text-4xl font-medium tracking-tight xl:text-5xl">
             Hola, I&apos;m Abhishek 👋
           </p>
-          <p className="scroll-m-20 md:text-lg tracking-tight xl:text-xl">
-            A Frontend Developer,with expertise in frontend frameworks like
-            React Js.
-            <br></br> <span>I transform ideas into stunning realities.</span>
+          <p className="scroll-m-20 text-lg tracking-tight xl:text-xl">
+            I transform ideas into stunning realities
           </p>
+          <span className="scroll-m-20 md:text-lg tracking-tight xl:text-xl">
+            A Frontend Developer, with expertise in frontend frameworks like
+            React Js
+          </span>
           {/* <p>
             Bold and Confident Headline: Your Vision, My Code Subheadline: I
             transform ideas into stunning realities. Call to Action: View My
@@ -34,22 +35,22 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex flex-row items-center pt-6 gap-5 justify-center lg:justify-start">
+      <div className="flex flex-row items-center pt-10 md:pt-4 gap-5 justify-center md:justify-start">
         <Link
           href={"http://github.com/abhishekjaiswar221"}
-          className="h-10 w-10 rounded-full border-2   flex items-center justify-center"
+          className="h-10 w-10 rounded-full border-2 flex items-center justify-center"
         >
           <Github size={18} strokeWidth={1.5} />
         </Link>
         <Link
           href={"http://github.com/abhishekjaiswar221"}
-          className="h-10 w-10 rounded-full border-2   flex items-center justify-center"
+          className="h-10 w-10 rounded-full border-2 flex items-center justify-center"
         >
           <Linkedin size={18} strokeWidth={1.5} />
         </Link>
         <Link
           href={"http://github.com/abhishekjaiswar221"}
-          className="h-10 w-10 rounded-full border-2   flex items-center justify-center"
+          className="h-10 w-10 rounded-full border-2 flex items-center justify-center"
         >
           <Twitter size={18} strokeWidth={1.5} />
         </Link>
@@ -74,4 +75,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

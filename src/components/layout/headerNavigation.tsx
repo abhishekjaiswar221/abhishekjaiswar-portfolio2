@@ -1,5 +1,6 @@
 "use client";
 
+import React, { FC } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -20,9 +21,9 @@ import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
-export default function HeaderNavigation() {
+const HeaderNavigation: FC = () => {
   return (
-    <header className="w-full flex bg-white gap-10 items-center justify-center p-4 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
+    <header className="w-full flex bg-white items-center justify-between py-4 px-6 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
       <div className="w-full justify-start items-center">
         <Link href="/" className="flex items-center">
           <h3 className="text-lg font-semibold tracking-tight">
@@ -32,7 +33,6 @@ export default function HeaderNavigation() {
       </div>
       <NavigationMenu className="w-full items-center justify-center hidden md:flex">
         <NavigationMenuList>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
@@ -41,16 +41,14 @@ export default function HeaderNavigation() {
               <Link href="/">Projects</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
               className={cn(navigationMenuTriggerStyle())}
             >
-              <Link href="/experience">Work Experience</Link>
+              <Link href="/work">Work</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
@@ -59,7 +57,6 @@ export default function HeaderNavigation() {
               <Link href="/skills">Skills</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* Nav Items */}
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
@@ -95,14 +92,14 @@ export default function HeaderNavigation() {
             <SheetDescription>Header Navigation</SheetDescription>
           </VisuallyHidden>
 
-          <SheetTrigger asChild>
+          {/* <SheetTrigger asChild>
             <Link className="flex items-center gap-2" href="/">
               <h3 className="text-lg font-semibold tracking-tight">
                 Abhishek D Jaiswar
               </h3>
             </Link>
-          </SheetTrigger>
-          <ul className="flex flex-col items-center justify-center h-screen gap-3 mt-4">
+          </SheetTrigger> */}
+          <ul className="flex flex-col text-xl items-center justify-center h-screen gap-5">
             <li>
               <SheetTrigger asChild>
                 <Link href="/">Projects</Link>
@@ -110,7 +107,7 @@ export default function HeaderNavigation() {
             </li>
             <li>
               <SheetTrigger asChild>
-                <Link href="/experience">Work Experience</Link>
+                <Link href="/work">Work</Link>
               </SheetTrigger>
             </li>
             <li>
@@ -133,4 +130,6 @@ export default function HeaderNavigation() {
       </Sheet>
     </header>
   );
-}
+};
+
+export default HeaderNavigation;
