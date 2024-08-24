@@ -15,7 +15,7 @@ const Skills: FC = () => {
           What I Know
         </h3>
       </div>
-      <div className="flex flex-col md:grid md:grid-cols-4 gap-10">
+      <div className="flex flex-col md:grid grid-cols-2 lg:grid-cols-4 gap-6 w-full place-items-center">
         <TechCard cardTitle={"Frontend"} iterableArray={frontendTechIcons} />
         <TechCard
           cardTitle={"Backend & DevOps"}

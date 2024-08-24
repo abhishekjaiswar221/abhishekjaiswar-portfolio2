@@ -10,7 +10,7 @@ interface TechCardProps {
 
 const TechCard: FC<TechCardProps> = ({ iterableArray, cardTitle }) => {
   return (
-    <Card className="h-[270px] w-64">
+    <Card className="h-fit md:h-[270px] w-5/6 md:w-full shadow-none">
       <CardHeader>
         <CardTitle className="text-center">{cardTitle}</CardTitle>
       </CardHeader>

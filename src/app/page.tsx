@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Hero from "@/components/hero";
 import Skills from "@/components/skills";
-import Projects from "@/components/projects";
+// import Projects from "@/components/projects";
 import MainProjects from "@/components/mainProjects";
 
 const Home: FC = () => {
@@ -13,9 +13,9 @@ const Home: FC = () => {
       <section id="main-projects">
         <MainProjects />
       </section>
-      <section id="projects">
+      {/* <section id="projects">
         <Projects />
-      </section>
+      </section> */}
       <section id="skills">
         <Skills />
       </section>
