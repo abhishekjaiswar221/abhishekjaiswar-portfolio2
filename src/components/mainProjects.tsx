@@ -12,15 +12,15 @@ const MainProjects: FC = () => {
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center gap-5">
         {mainProjects.map(
-          ({ id, title, description, tech1, tech2 }: MainProjectsType) => {
+          ({ id, imgSrc, altText, title, techStacks }: MainProjectsType) => {
             return (
               <MainProjectCard
                 key={id}
                 id={id}
+                imgSrc={imgSrc}
+                altText={altText}
                 title={title}
-                description={description}
-                tech1={tech1}
-                tech2={tech2}
+                techStacks={techStacks}
               />
             );
           }

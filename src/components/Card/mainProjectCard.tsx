@@ -12,10 +12,10 @@ import Image from "next/image";
 
 const MainProjectCard: FC<MainProjectsType> = ({
   id,
+  imgSrc,
+  altText,
   title,
-  description,
-  tech1,
-  tech2,
+  techStacks,
 }) => {
   return (
     <Card
@@ -24,21 +24,18 @@ const MainProjectCard: FC<MainProjectsType> = ({
     >
       <div className="relative h-52">
         <Image
-          src="/projects/webstorm.png"
-          alt="Spotify Clone"
-          layout="fill"
-          objectFit="cover"
+          src={imgSrc}
+          alt={altText}
+          width={400}
+          height={300}
+          priority={true}
           className="w-full h-full object-cover"
         />
       </div>
       <CardContent className="px-4 py-3">
         <CardTitle className="text-xl font-semibold">{title}</CardTitle>
         <div className="flex h-full items-center justify-between w-full p-0">
-          <CardDescription>
-            {description}
-            {tech1}
-            {tech2}
-          </CardDescription>
+          <CardDescription>{techStacks}</CardDescription>
           <div className="flex items-center justify-center gap-1">
             <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
               <Github size={18} strokeWidth={1.5} />

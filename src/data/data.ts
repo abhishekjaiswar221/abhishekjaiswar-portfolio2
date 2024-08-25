@@ -317,32 +317,32 @@ export const backend_devopsTechIcons: Array<TechIconType> = [
 export interface MainProjectsType {
   id: number;
   title: string;
-  description: string;
-  tech1: string;
-  tech2: string;
+  techStacks: string;
+  imgSrc: string;
+  altText: string;
 }
 
 export const mainProjects: Array<MainProjectsType> = [
   {
     id: 1,
     title: "web development",
-    description: "This is description",
-    tech1: "React",
-    tech2: "Shadcn/ui",
+    techStacks: "This is description",
+    imgSrc: "/projects/webstorm.png",
+    altText: "Web Developement",
   },
   {
     id: 2,
     title: "web development",
-    description: "This is description",
-    tech1: "React",
-    tech2: "Shadcn/ui",
+    techStacks: "This is description",
+    imgSrc: "/projects/webstorm.png",
+    altText: "Web Developement",
   },
   {
     id: 3,
     title: "web development",
-    description: "This is description",
-    tech1: "React",
-    tech2: "Shadcn/ui",
+    techStacks: "This is description",
+    imgSrc: "/projects/webstorm.png",
+    altText: "Web Developement",
   },
 ];
 
