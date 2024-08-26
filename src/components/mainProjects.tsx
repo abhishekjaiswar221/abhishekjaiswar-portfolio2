@@ -12,7 +12,15 @@ const MainProjects: FC = () => {
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center gap-5">
         {mainProjects.map(
-          ({ id, imgSrc, altText, title, techStacks }: MainProjectsType) => {
+          ({
+            id,
+            imgSrc,
+            altText,
+            title,
+            techStacks,
+            githubLink,
+            liveLink,
+          }: MainProjectsType) => {
             return (
               <MainProjectCard
                 key={id}
@@ -21,6 +29,8 @@ const MainProjects: FC = () => {
                 altText={altText}
                 title={title}
                 techStacks={techStacks}
+                githubLink={githubLink}
+                liveLink={liveLink}
               />
             );
           }

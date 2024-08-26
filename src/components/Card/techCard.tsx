@@ -18,7 +18,12 @@ const TechCard: FC<TechCardProps> = ({ iterableArray, cardTitle }) => {
         {iterableArray.map(({ id, title, imgSrc, altText }: TechIconType) => {
           return (
             <div key={id} className="flex flex-col items-center gap-2">
-              <Image src={imgSrc} alt={altText} width={33} height={33} />
+              <Image
+                src={`/techIcons/${imgSrc}`}
+                alt={altText}
+                width={33}
+                height={33}
+              />
               {/* <span className="text-xs">{title}</span> */}
             </div>
           );
