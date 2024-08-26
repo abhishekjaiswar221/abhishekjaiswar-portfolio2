@@ -36,12 +36,12 @@ const HeaderNavigation: FC = () => {
     <header className="w-full flex bg-white items-center justify-between py-4 px-6 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
       {/* Desktop Navigation */}
       <div>
-        <Link href="/contact">
-          <Button className="p-2 flex items-center justify-center gap-2">
+        <Button asChild className="p-2 flex items-center justify-center gap-2">
+          <Link href="/contact">
             <span>Contact Me</span>
             <UserRound size={17} />
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
       <NavigationMenu className="w-full items-center justify-center hidden md:flex">
         <NavigationMenuList>
@@ -146,8 +146,10 @@ const HeaderNavigation: FC = () => {
             <li>
               <SheetTrigger asChild>
                 <div className="flex gap-2 items-center justify-center p-4">
-                  <Github className="text-[#7440c7]" />
-                  <Link href="/">Github</Link>
+                  <Github className="text-[#8a4ced]" />
+                  <Link href="https://github.com/abhishekjaiswar221">
+                    Github
+                  </Link>
                 </div>
               </SheetTrigger>
             </li>
@@ -155,7 +157,9 @@ const HeaderNavigation: FC = () => {
               <SheetTrigger asChild>
                 <div className="flex gap-2 items-center justify-center p-4">
                   <Linkedin className="text-[#0a66c2]" />
-                  <Link href="/projects">LinkedIn</Link>
+                  <Link href="https://linkedin.com/in/abhishekjai221">
+                    LinkedIn
+                  </Link>
                 </div>
               </SheetTrigger>
             </li>
@@ -163,7 +167,7 @@ const HeaderNavigation: FC = () => {
               <SheetTrigger asChild>
                 <div className="flex gap-2 items-center justify-center p-4">
                   <Twitter className="text-[#029dee]" />
-                  <Link href="/skills">Twitter</Link>
+                  <Link href="https://x.com/abhishekjai221">Twitter</Link>
                 </div>
               </SheetTrigger>
             </li>
