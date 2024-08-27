@@ -24,7 +24,7 @@ const MainProjectCard: FC<MainProjectsType> = ({
           height={700}
           className="aspect-video object-cover"
         />
-        <div className="flex flex-col px-4 py-2 h-24">
+        <div className="flex flex-col px-4 pb-3 h-15">
           <div className="flex font-bold">{title}</div>
           <div className="flex text-info text-xs">{techStacks}</div>
         </div>
