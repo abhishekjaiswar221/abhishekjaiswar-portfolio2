@@ -21,7 +21,7 @@ const TechCard: FC<TechCardProps> = ({ iterableArray, cardTitle }) => {
             <div key={id} className="flex flex-col items-center gap-2">
               <Button
                 variant={"outline"}
-                className="flex w-28 h-10 items-center justify-center gap-2 shadow-md"
+                className="flex w-28 h-10 items-center justify-center gap-2 shadow-md border-none"
               >
                 <Image
                   src={`/techIcons/${imgSrc}`}
