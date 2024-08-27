@@ -17,19 +17,31 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import {
+  CodeXml,
+  Github,
+  Home,
+  Linkedin,
+  Menu,
+  Monitor,
+  SquareTerminal,
+  Twitter,
+  UserRound,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const HeaderNavigation: FC = () => {
   return (
     <header className="w-full flex bg-white items-center justify-between py-4 px-6 lg:px-16 xl:px-28 shadow-sm fixed top-0 z-10">
-      <div className="w-full justify-start items-center">
-        <Link href="/" className="flex items-center">
-          <h3 className="text-lg font-semibold tracking-tight">
-            Abhishek Jaiswar
-          </h3>
-        </Link>
+      {/* Desktop Navigation */}
+      <div>
+        <Button asChild className="p-2 flex items-center justify-center gap-2">
+          <Link href="/contact">
+            <span>Contact Me</span>
+            <UserRound size={17} />
+          </Link>
+        </Button>
       </div>
       <NavigationMenu className="w-full items-center justify-center hidden md:flex">
         <NavigationMenuList>
@@ -38,7 +50,7 @@ const HeaderNavigation: FC = () => {
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <Link href="/">Projects</Link>
+              <Link href="/">Home</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -46,7 +58,7 @@ const HeaderNavigation: FC = () => {
               asChild
               className={cn(navigationMenuTriggerStyle())}
             >
-              <Link href="/work">Work</Link>
+              <Link href="/projects">Projects</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
@@ -62,29 +74,24 @@ const HeaderNavigation: FC = () => {
               asChild
               className={cn(navigationMenuTriggerStyle())}
             >
-              <Link href="/about">About</Link>
+              <Link href="/experience">Work Experience</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      {/* <div className="w-full justify-end items-center hidden md:flex">
-        <Link href="/contact">
-          <Button>Contact</Button>
-        </Link>
-      </div> */}
+
+      {/* Mobile Navigation */}
       <Sheet>
         <SheetTrigger asChild className="w-full flex justify-end items-center">
           <div className="w-full md:hidden">
-            {/* <Button variant="outline" size="icon"> */}
-            <Menu size={22} strokeWidth={1.5} />
-            {/* </Button> */}
+            <Menu />
           </div>
         </SheetTrigger>
 
         <SheetContent className="w-full">
           <VisuallyHidden>
             <SheetTitle
-              aria-describedby="Menu"
+              aria-describedby="Name"
               className="text-lg font-semibold tracking-tight"
             >
               Abhishek D Jaiswar
@@ -92,37 +99,76 @@ const HeaderNavigation: FC = () => {
             <SheetDescription>Header Navigation</SheetDescription>
           </VisuallyHidden>
 
-          {/* <SheetTrigger asChild>
-            <Link className="flex items-center gap-2" href="/">
-              <h3 className="text-lg font-semibold tracking-tight">
-                Abhishek D Jaiswar
-              </h3>
-            </Link>
-          </SheetTrigger> */}
-          <ul className="flex flex-col text-xl items-center justify-center h-screen gap-5">
+          <ul className="flex flex-col text-base items-start justify-start h-screen pt-6">
             <li>
               <SheetTrigger asChild>
-                <Link href="/">Projects</Link>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <Home />
+                  <Link href="/">Home</Link>
+                </div>
               </SheetTrigger>
             </li>
             <li>
               <SheetTrigger asChild>
-                <Link href="/work">Work</Link>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <CodeXml />
+                  <Link href="/projects">Projects</Link>
+                </div>
               </SheetTrigger>
             </li>
             <li>
               <SheetTrigger asChild>
-                <Link href="/skills">Skills</Link>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <SquareTerminal />
+                  <Link href="/skills">Skills</Link>
+                </div>
               </SheetTrigger>
             </li>
             <li>
               <SheetTrigger asChild>
-                <Link href="/about">About</Link>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <Monitor />
+                  <Link href="/experience">Work Experience</Link>
+                </div>
               </SheetTrigger>
             </li>
             <li>
               <SheetTrigger asChild>
-                <Link href="/contact">Contact</Link>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <UserRound />
+                  <Link href="/contact">Contact</Link>
+                </div>
+              </SheetTrigger>
+            </li>
+            <div className="pt-5">
+              <h1>Socials</h1>
+            </div>
+            <li>
+              <SheetTrigger asChild>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <Github className="text-[#6225c5]" />
+                  <Link href="https://github.com/abhishekjaiswar221">
+                    Github
+                  </Link>
+                </div>
+              </SheetTrigger>
+            </li>
+            <li>
+              <SheetTrigger asChild>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <Linkedin className="text-[#0a66c2]" />
+                  <Link href="https://linkedin.com/in/abhishekjai221">
+                    LinkedIn
+                  </Link>
+                </div>
+              </SheetTrigger>
+            </li>
+            <li>
+              <SheetTrigger asChild>
+                <div className="flex gap-2 items-center justify-center p-4">
+                  <Twitter className="text-[#1c9cea]" />
+                  <Link href="https://x.com/abhishekjai221">Twitter</Link>
+                </div>
               </SheetTrigger>
             </li>
           </ul>

@@ -1,3 +1,34 @@
+export interface SocialIconsType {
+  id: number;
+  title: string;
+  href: string;
+  imgSrc: string;
+  altText: string;
+}
+
+export const socialIcons: Array<SocialIconsType> = [
+  {
+    id: 1,
+    title: "Github",
+    href: "http://github.com/abhishekjaiswar221",
+    imgSrc: "github-circle.svg",
+    altText: "Github Logo",
+  },
+  {
+    id: 2,
+    title: "LinkedIn",
+    href: "https://linkedin.com/in/abhishekjai221",
+    imgSrc: "linkedin-circle.svg",
+    altText: "LinkedIn Logo",
+  },
+  {
+    id: 3,
+    title: "Twitter",
+    href: "https://x.com/abhishekjai221",
+    imgSrc: "twitter-circle.svg",
+    altText: "Twitter Logo",
+  },
+];
 export interface TechIconType {
   id: number;
   title: string;
@@ -9,73 +40,73 @@ export const frontendTechIcons: Array<TechIconType> = [
   {
     id: 1,
     title: "HTML",
-    imgSrc: "/techIcons/html5.svg",
+    imgSrc: "html5.svg",
     altText: "HTML Logo",
   },
   {
     id: 2,
     title: "CSS",
-    imgSrc: "/techIcons/css3.svg",
+    imgSrc: "css3.svg",
     altText: "CSS Logo",
   },
   {
     id: 3,
     title: "Sass",
-    imgSrc: "/techIcons/sass.svg",
+    imgSrc: "sass.svg",
     altText: "Sass Logo",
   },
   {
     id: 4,
     title: "Bootstrap CSS",
-    imgSrc: "/techIcons/bootstrap.svg",
+    imgSrc: "bootstrap.svg",
     altText: "Bootstrap CSS Logo",
   },
   {
     id: 5,
     title: "Tailwind CSS",
-    imgSrc: "/techIcons/tailwindcss.svg",
+    imgSrc: "tailwindcss.svg",
     altText: "Tailwind CSS Logo",
   },
   {
     id: 6,
     title: "Shadcn/UI",
-    imgSrc: "/techIcons/shadcnui.svg",
+    imgSrc: "shadcnui.svg",
     altText: "Shadcn/ui Logo",
   },
   {
     id: 7,
     title: "Radix UI",
-    imgSrc: "/techIcons/radixui.svg",
+    imgSrc: "radixui.svg",
     altText: "Radix UI Logo",
   },
   {
     id: 8,
     title: "Framer Motion",
-    imgSrc: "/techIcons/framer.svg",
+    imgSrc: "framer.svg",
     altText: "Framer Motion Logo",
   },
   {
     id: 9,
     title: "Javascript",
-    imgSrc: "/techIcons/js.svg",
+    imgSrc: "js.svg",
     altText: "Javascript Logo",
   },
   {
     id: 10,
     title: "React JS",
-    imgSrc: "/techIcons/reactjs.svg",
+    imgSrc: "reactjs.svg",
     altText: "React JS Logo",
   },
   {
     id: 11,
     title: "Redux JS",
-    imgSrc: "/techIcons/redux.svg",
+    imgSrc: "redux.svg",
     altText: "Redux JS Logo",
   },
   // {
   //   id: 12,
   //   title: "Zod",
-  //   imgSrc: "/techIcons/zod.svg",
+  //   imgSrc: "zod.svg",
   //   altText: "Zod Logo",
   // },
 ];
@@ -84,61 +115,61 @@ export const othersTechIcons: Array<TechIconType> = [
   {
     id: 1,
     title: "REST API",
-    imgSrc: "/techIcons/restapi.svg",
+    imgSrc: "restapi.svg",
     altText: "REST API Logo",
   },
   {
     id: 2,
     title: "Postman",
-    imgSrc: "/techIcons/postman.svg",
+    imgSrc: "postman.svg",
     altText: "Postman Logo",
   },
   {
     id: 3,
     title: "Canva",
-    imgSrc: "/techIcons/canva.svg",
+    imgSrc: "canva.svg",
     altText: "Canva Logo",
   },
   {
     id: 4,
     title: "Vite JS",
-    imgSrc: "/techIcons/vitejs.svg",
+    imgSrc: "vitejs.svg",
     altText: "Vite Js Logo",
   },
   {
     id: 5,
     title: "Rollup Js",
-    imgSrc: "/techIcons/rollup.svg",
+    imgSrc: "rollup.svg",
     altText: "Rollup Js Logo",
   },
   {
     id: 6,
     title: "Eslint",
-    imgSrc: "/techIcons/eslint.svg",
+    imgSrc: "eslint.svg",
     altText: "Eslint Logo",
   },
   {
     id: 7,
     title: "Prettier",
-    imgSrc: "/techIcons/prettier.svg",
+    imgSrc: "prettier.svg",
     altText: "Prettier Logo",
   },
   // {
   //   id: 8,
   //   title: "JSON",
-  //   imgSrc: "/techIcons/json.svg",
+  //   imgSrc: "json.svg",
   //   altText: "JSON Logo",
   // },
   // {
   //   id: 9,
   //   title: "Figma",
-  //   imgSrc: "/techIcons/figma.svg",
+  //   imgSrc: "figma.svg",
   //   altText: "Figma Logo",
   // },
   // {
   //   id: 10,
   //   title: "Markdown",
-  //   imgSrc: "/techIcons/markdown.svg",
+  //   imgSrc: "markdown.svg",
   //   altText: "Markdown Logo",
   // },
 ];
@@ -147,31 +178,31 @@ export const devToolsTechIcons: Array<TechIconType> = [
   {
     id: 1,
     title: "VS Code",
-    imgSrc: "/techIcons/vscode.svg",
+    imgSrc: "vscode.svg",
     altText: "VS Code Logo",
   },
   {
     id: 2,
     title: "Webstorm",
-    imgSrc: "/techIcons/webstorm.svg",
+    imgSrc: "webstorm.svg",
     altText: "Webstorm Logo",
   },
   {
     id: 3,
     title: "Intellij IDEA",
-    imgSrc: "/techIcons/intellij.svg",
+    imgSrc: "intellij.svg",
     altText: "Intellij IDEA Logo",
   },
   {
     id: 4,
     title: "Datagrip",
-    imgSrc: "/techIcons/datagrip.svg",
+    imgSrc: "datagrip.svg",
     altText: "Datagrip Logo",
   },
   // {
   //   id: 5,
   //   title: "JetBrains",
-  //   imgSrc: "/techIcons/jetbrains.svg",
+  //   imgSrc: "jetbrains.svg",
   //   altText: "JetBrains Logo",
   // },
 ];
@@ -180,55 +211,55 @@ export const backend_devopsTechIcons: Array<TechIconType> = [
   {
     id: 1,
     title: "Java",
-    imgSrc: "/techIcons/java.svg",
+    imgSrc: "java.svg",
     altText: "Java Logo",
   },
   {
     id: 2,
     title: "MySQL",
-    imgSrc: "/techIcons/mysql.svg",
+    imgSrc: "mysql.svg",
     altText: "MySQL Logo",
   },
   {
     id: 3,
     title: "MongoDB",
-    imgSrc: "/techIcons/mongodb.svg",
+    imgSrc: "mongodb.svg",
     altText: "MongoDB Logo",
   },
   {
     id: 4,
     title: "Git",
-    imgSrc: "/techIcons/git.svg",
+    imgSrc: "git.svg",
     altText: "Git Logo",
   },
   {
     id: 5,
     title: "Github",
-    imgSrc: "/techIcons/github.svg",
+    imgSrc: "github.svg",
     altText: "Github Logo",
   },
   {
     id: 6,
     title: "Vercel",
-    imgSrc: "/techIcons/vercel.svg",
+    imgSrc: "vercel.svg",
     altText: "Vercel Logo",
   },
   {
     id: 7,
     title: "Cloudflare Pages",
-    imgSrc: "/techIcons/cloudflare.svg",
+    imgSrc: "cloudflare.svg",
     altText: "Cloudflare Pages Logo",
   },
   {
     id: 8,
     title: "Netlify",
-    imgSrc: "/techIcons/netlify.svg",
+    imgSrc: "netlify.svg",
     altText: "Netlify Logo",
   },
   // {
   //   id: 9,
   //   title: "Mongoose Js",
-  //   imgSrc: "/techIcons/mongoose.svg",
+  //   imgSrc: "mongoose.svg",
   //   altText: "Mongoose Logo",
   // },
 ];
@@ -237,31 +268,31 @@ export const backend_devopsTechIcons: Array<TechIconType> = [
 //   {
 //     id: 1,
 //     title: "Git",
-//     imgSrc: "/techIcons/git.svg",
+//     imgSrc: "git.svg",
 //     altText: "Git Logo",
 //   },
 //   {
 //     id: 2,
 //     title: "Github",
-//     imgSrc: "/techIcons/github.svg",
+//     imgSrc: "github.svg",
 //     altText: "Github Logo",
 //   },
 //   {
 //     id: 3,
 //     title: "Vercel",
-//     imgSrc: "/techIcons/vercel.svg",
+//     imgSrc: "vercel.svg",
 //     altText: "Vercel Logo",
 //   },
 //   {
 //     id: 4,
 //     title: "Cloudflare Pages",
-//     imgSrc: "/techIcons/cloudflare.svg",
+//     imgSrc: "cloudflare.svg",
 //     altText: "Cloudflare Pages Logo",
 //   },
 //   {
 //     id: 5,
 //     title: "Netlify",
-//     imgSrc: "/techIcons/netlify.svg",
+//     imgSrc: "netlify.svg",
 //     altText: "Netlify Logo",
 //   },
 // ];
@@ -270,25 +301,25 @@ export const backend_devopsTechIcons: Array<TechIconType> = [
 //   {
 //     id: 1,
 //     title: "Vite JS",
-//     imgSrc: "/techIcons/vitejs.svg",
+//     imgSrc: "vitejs.svg",
 //     altText: "Vite Js Logo",
 //   },
 //   {
 //     id: 2,
 //     title: "Rollup Js",
-//     imgSrc: "/techIcons/rollup.svg",
+//     imgSrc: "rollup.svg",
 //     altText: "Rollup Js Logo",
 //   },
 //   {
 //     id: 3,
 //     title: "Eslint",
-//     imgSrc: "/techIcons/eslint.svg",
+//     imgSrc: "eslint.svg",
 //     altText: "Eslint Logo",
 //   },
 //   {
 //     id: 4,
 //     title: "Prettier",
-//     imgSrc: "/techIcons/prettier.svg",
+//     imgSrc: "prettier.svg",
 //     altText: "Prettier Logo",
 //   },
 // ];
@@ -297,19 +328,19 @@ export const backend_devopsTechIcons: Array<TechIconType> = [
 //   {
 //     id: 1,
 //     title: "NPM",
-//     imgSrc: "/techIcons/npm.svg",
+//     imgSrc: "npm.svg",
 //     altText: "NPM Logo",
 //   },
 //   {
 //     id: 2,
 //     title: "PNPM",
-//     imgSrc: "/techIcons/pnpm.svg",
+//     imgSrc: "pnpm.svg",
 //     altText: "PNPM Logo",
 //   },
 //   {
 //     id: 3,
 //     title: "Yarn",
-//     imgSrc: "/techIcons/yarn.svg",
+//     imgSrc: "yarn.svg",
 //     altText: "Yarn Logo",
 //   },
 // ];
@@ -317,32 +348,49 @@ export const backend_devopsTechIcons: Array<TechIconType> = [
 export interface MainProjectsType {
   id: number;
   title: string;
-  description: string;
-  tech1: string;
-  tech2: string;
+  techStacks: string;
+  imgSrc: string;
+  altText: string;
+  githubLink: string;
+  liveLink: string;
 }
 
 export const mainProjects: Array<MainProjectsType> = [
   {
     id: 1,
-    title: "web development",
-    description: "This is description",
-    tech1: "React",
-    tech2: "Shadcn/ui",
+    title: "The Shopping Booth",
+    techStacks: "React Js, Redux, Javascript, Shadcn/ui",
+    imgSrc: "webstorm.png",
+    altText: "The Shopping Booth",
+    githubLink: "https://github.com/abhishekjaiswar221/the-shopping-booth",
+    liveLink: "https://theshoppingbooth.vercel.app",
   },
   {
     id: 2,
-    title: "web development",
-    description: "This is description",
-    tech1: "React",
-    tech2: "Shadcn/ui",
+    title: "Taskify Cloud Todo",
+    techStacks: "React Js, Javascript, Shadcn/ui, Tailwind",
+    imgSrc: "webstorm.png",
+    altText: "Taskify Cloud Todo",
+    githubLink: "https://github.com/abhishekjaiswar221/taskify-cloud-todo",
+    liveLink: "https://taskifytodo.vercel.app",
   },
   {
     id: 3,
-    title: "web development",
-    description: "This is description",
-    tech1: "React",
-    tech2: "Shadcn/ui",
+    title: "Microsoft UI Clone",
+    techStacks: "React Js, Javascript, Tailwind",
+    imgSrc: "webstorm.png",
+    altText: "Microsoft UI Clone",
+    githubLink: "https://github.com/abhishekjaiswar221/microsoft-ui-clone",
+    liveLink: "https://microsoftui.vercel.app",
+  },
+  {
+    id: 4,
+    title: "Microsoft UI Clone",
+    techStacks: "React Js, Javascript, Tailwind",
+    imgSrc: "webstorm.png",
+    altText: "Microsoft UI Clone",
+    githubLink: "https://github.com/abhishekjaiswar221/microsoft-ui-clone",
+    liveLink: "https://microsoftui.vercel.app",
   },
 ];
 

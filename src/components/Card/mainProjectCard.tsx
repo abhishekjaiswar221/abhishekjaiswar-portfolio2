@@ -1,55 +1,47 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Github } from "lucide-react";
 import { FC } from "react";
 import { MainProjectsType } from "@/data/data";
 import Image from "next/image";
+import Link from "next/link";
 
 const MainProjectCard: FC<MainProjectsType> = ({
   id,
+  imgSrc,
+  altText,
   title,
-  description,
-  tech1,
-  tech2,
+  techStacks,
+  githubLink,
+  liveLink,
 }) => {
   return (
-    <Card
-      key={id}
-      className="w-full mx-auto rounded-lg overflow-hidden shadow-none"
-    >
-      <div className="relative h-52">
+    <div className="relative">
+      <div className="flex flex-col overflow-hidden gap-3 bg-white text-zinc-800 rounded-lg overflow-ellipsis border">
         <Image
-          src="/projects/webstorm.png"
-          alt="Spotify Clone"
-          layout="fill"
-          objectFit="cover"
-          className="w-full h-full object-cover"
+          src={`/projects/${imgSrc}`}
+          alt={altText}
+          width={700}
+          height={700}
+          className="aspect-video object-cover"
         />
-      </div>
-      <CardContent className="px-4 py-3">
-        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
-        <div className="flex h-full items-center justify-between w-full p-0">
-          <CardDescription>
-            {description}
-            {tech1}
-            {tech2}
-          </CardDescription>
-          <div className="flex items-center justify-center gap-1">
-            <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
-              <Github size={18} strokeWidth={1.5} />
-            </div>
-            <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
-              <ArrowUpRight size={18} strokeWidth={1.5} />
-            </div>
-          </div>
+        <div className="flex flex-col px-4 py-2 h-24">
+          <div className="flex font-bold">{title}</div>
+          <div className="flex text-info text-xs">{techStacks}</div>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+      <div className="absolute top-2 right-2 flex items-center justify-center gap-1">
+        <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
+          <Link href={githubLink || "/"} target="_blank">
+            <Github className="text-white" size={18} strokeWidth={1.5} />
+          </Link>
+        </div>
+        <div className="border flex items-center justify-center h-7 w-7 rounded-full border-gray-300">
+          <Link href={liveLink || "/"} target="_blank">
+            <ArrowUpRight className="text-white" size={18} strokeWidth={1.5} />
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 
