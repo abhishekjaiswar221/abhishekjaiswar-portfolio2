@@ -1,3 +1,34 @@
+export interface SocialIconsType {
+  id: number;
+  title: string;
+  href: string;
+  imgSrc: string;
+  altText: string;
+}
+
+export const socialIcons: Array<SocialIconsType> = [
+  {
+    id: 1,
+    title: "Github",
+    href: "http://github.com/abhishekjaiswar221",
+    imgSrc: "github-circle.svg",
+    altText: "Github Logo",
+  },
+  {
+    id: 2,
+    title: "LinkedIn",
+    href: "https://linkedin.com/in/abhishekjai221",
+    imgSrc: "linkedin-circle.svg",
+    altText: "LinkedIn Logo",
+  },
+  {
+    id: 3,
+    title: "Twitter",
+    href: "https://x.com/abhishekjai221",
+    imgSrc: "twitter-circle.svg",
+    altText: "Twitter Logo",
+  },
+];
 export interface TechIconType {
   id: number;
   title: string;

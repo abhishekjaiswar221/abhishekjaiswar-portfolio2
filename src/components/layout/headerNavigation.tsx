@@ -146,7 +146,7 @@ const HeaderNavigation: FC = () => {
             <li>
               <SheetTrigger asChild>
                 <div className="flex gap-2 items-center justify-center p-4">
-                  <Github className="text-[#8a4ced]" />
+                  <Github className="text-[#6225c5]" />
                   <Link href="https://github.com/abhishekjaiswar221">
                     Github
                   </Link>
@@ -166,7 +166,7 @@ const HeaderNavigation: FC = () => {
             <li>
               <SheetTrigger asChild>
                 <div className="flex gap-2 items-center justify-center p-4">
-                  <Twitter className="text-[#029dee]" />
+                  <Twitter className="text-[#1c9cea]" />
                   <Link href="https://x.com/abhishekjai221">Twitter</Link>
                 </div>
               </SheetTrigger>

@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
+import { socialIcons } from "@/data/data";
 
 const Hero: FC = () => {
   return (
@@ -33,25 +33,25 @@ const Hero: FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center pt-2 md:pt-4 gap-5 justify-center md:justify-start">
-        <Link
-          href={"http://github.com/abhishekjaiswar221"}
-          className="h-10 w-10 rounded-full flex items-center justify-center bg-[#8a4ced]"
-        >
-          <Github className="text-white" size={19} />
-        </Link>
-        <Link
-          href={"https://linkedin.com/in/abhishekjai221"}
-          className="h-10 w-10 rounded-full flex items-center justify-center bg-[#0a66c2]"
-        >
-          <Linkedin className="text-white" size={19} />
-        </Link>
-        <Link
-          href={"https://x.com/abhishekjai221"}
-          className="h-10 w-10 rounded-full bg-[#029dee] flex items-center justify-center"
-        >
-          <Twitter className="text-white" size={19} />
-        </Link>
+      <div className="flex flex-row items-center pt-5 md:pt-4 gap-5 justify-center md:justify-start">
+        {socialIcons.map(({ id, href, imgSrc, altText }) => {
+          return (
+            <div key={id}>
+              <Link
+                href={href}
+                className={`h-10 w-10 rounded-full flex items-center justify-center border-2 shadow-md`}
+              >
+                <Image
+                  className="h-8 w-8"
+                  src={`/socials/${imgSrc}`}
+                  width={19}
+                  height={19}
+                  alt={altText}
+                />
+              </Link>
+            </div>
+          );
+        })}
         {/* <Button
           className="rounded-full w-fit shadow-none"
           variant={"outline"}
