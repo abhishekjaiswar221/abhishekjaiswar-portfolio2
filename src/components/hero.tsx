@@ -33,12 +33,12 @@ const Hero: FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center pt-5 md:pt-4 gap-5 justify-center md:justify-start">
+      <div className="flex flex-row items-center pt-5 md:pt-0 gap-5 justify-center md:justify-start">
         {socialIcons.map(({ id, href, imgSrc, altText }) => {
           return (
             <div key={id}>
               <Link
-                href={href}
+                href={href || "/"}
                 className={`h-10 w-10 rounded-full flex items-center justify-center border-2 shadow-md`}
               >
                 <Image
@@ -65,7 +65,7 @@ const Hero: FC = () => {
           Contact Me
         </Button> */}
       </div>
-      <div className="text-center md:text-start pt-2">
+      <div className="text-center md:text-start">
         <Button asChild className="w-fit shadow-none">
           <Link href="/contact">Connect With Me</Link>
         </Button>
