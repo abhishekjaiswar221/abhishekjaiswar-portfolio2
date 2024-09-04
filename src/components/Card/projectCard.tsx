@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectType> = ({
   imageSrc,
 }) => {
   return (
-    <Card key={id} className="w-full flex flex-col justify-between">
+    <Card key={id} className="flex w-full flex-col justify-between">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectType> = ({
           alt="Project"
           width={128}
           height={128}
-          className="rounded-lg w-full aspect-[3/2] object-cover"
+          className="aspect-[3/2] w-full rounded-lg object-cover"
         />
       </CardContent>
       {/* Make an element to take to the github page and the hosted site */}

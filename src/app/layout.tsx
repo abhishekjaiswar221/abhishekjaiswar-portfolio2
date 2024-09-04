@@ -14,17 +14,17 @@ export const metadata: Metadata = {
   description: "Personal Portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
       <body className={cn(inter.className, "h-full")}>
-        <div className="h-full flex flex-col items-center">
+        <div className="flex h-full flex-col items-center">
           <NextTopLoader
-            color="#282f3c"
+            color="#242424"
             initialPosition={0.08}
             crawlSpeed={200}
             height={2}

@@ -11,11 +11,11 @@ const Skills: FC = () => {
   return (
     <section className="flex flex-col items-center justify-center gap-10">
       <div>
-        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight text-[#3c3c43]">
           What I Know
         </h3>
       </div>
-      <div className="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-12 lg:gap-6 w-full place-items-center">
+      <div className="flex w-full flex-col items-center justify-center gap-5 md:grid md:grid-cols-2">
         <TechCard cardTitle={"Frontend"} iterableArray={frontendTechIcons} />
         <TechCard
           cardTitle={"Backend & DevOps"}
