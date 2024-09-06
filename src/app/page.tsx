@@ -6,7 +6,7 @@ import MainProjects from "@/components/mainProjects";
 
 const Home: FC = () => {
   return (
-    <main className="flex min-h-screen flex-col gap-10 justify-center px-5 md:container lg:px-16 xl:px-24">
+    <main className="flex min-h-screen flex-col gap-10 bg-[#fafbfc] px-6 pb-10 md:px-10 lg:px-20 xl:px-32">
       <section id="hero">
         <Hero />
       </section>

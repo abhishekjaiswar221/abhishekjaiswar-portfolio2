@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { CircleIcon, StarIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 
 const Page: FC = () => {
   return (
@@ -16,15 +17,16 @@ const Page: FC = () => {
       <div>
         <Button variant="ghost" className="mt-4" asChild>
           <Link href="/">
-            <span>&larr; Go back</span>
+            <ChevronLeft size={18} strokeWidth={1.5} />
+            <span>Go back</span>
           </Link>
         </Button>
         <h1 className="mt-4 scroll-m-20 text-4xl font-bold tracking-tight">
-          My Experience
+          More Projects
         </h1>
-        <p className="mt-2 text-lg text-muted-foreground">
+        {/* <p className="mt-2 text-lg text-muted-foreground">
           A brief overview of my career
-        </p>
+        </p> */}
       </div>
       <div className="mt-8">
         <ul className="flex flex-col items-center gap-4">

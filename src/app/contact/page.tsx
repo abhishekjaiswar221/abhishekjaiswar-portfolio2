@@ -4,17 +4,17 @@ import Link from "next/link";
 
 const Page: FC = () => {
   return (
-    <main className="px-4 flex flex-col py-6 max-w-3xl mx-auto">
+    <main className="mx-auto flex max-w-3xl flex-col px-4 py-6">
       <div>
         <Button variant="ghost" className="mt-4" asChild>
           <Link href="/">
             <span>&larr; Go back</span>
           </Link>
         </Button>
-        <h1 className="scroll-m-20 text-4xl font-bold tracking-tight mt-4">
+        <h1 className="mt-4 scroll-m-20 text-4xl font-bold tracking-tight">
           Reach out to me
         </h1>
-        <p className="text-lg text-muted-foreground mt-2">
+        <p className="mt-2 text-lg text-muted-foreground">
           I&apos;m always open to new opportunities
         </p>
       </div>
@@ -28,7 +28,7 @@ const Page: FC = () => {
           tenetur necessitatibus vero quidem quae deleniti voluptatibus!
         </p>
 
-        <p className="leading-7 mt-6">
+        <p className="mt-6 leading-7">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
           odit voluptates ullam impedit dignissimos maiores? Aliquid quas
           accusantium corrupti provident blanditiis illo nesciunt nisi nostrum
