@@ -1,12 +1,13 @@
 import { FC } from "react";
-import { MainProjectsType, mainProjects } from "@/data/data";
+import { mainProjects } from "@/data/mainProjects";
+import { MainProjectsType } from "@/data/dataTypes";
 import MainProjectCard from "./Card/mainProjectCard";
 
 const MainProjects: FC = () => {
   return (
     <section className="flex w-full flex-col gap-10">
       <div>
-        <h3 className="scroll-m-20 text-center text-2xl font-semibold tracking-tight text-[#3c3c43]">
+        <h3 className="scroll-m-20 text-center text-3xl font-semibold tracking-tight text-[#3c3c43]">
           Projects
         </h3>
       </div>

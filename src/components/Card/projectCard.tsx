@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "../ui/card";
 import Image from "next/image";
-import { ProjectType } from "@/data/data";
+import { ProjectType } from "@/data/dataTypes";
 
 const ProjectCard: React.FC<ProjectType> = ({
   id,

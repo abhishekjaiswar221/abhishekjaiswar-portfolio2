@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { projects } from "@/data/data";
+import { projects } from "@/data/projects";
 import ProjectCard from "./Card/projectCard";
-import { ProjectType } from "@/data/data";
+import { ProjectType } from "@/data/dataTypes";
 
 const Projects: FC = () => {
   return (

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Github } from "lucide-react";
 import { FC } from "react";
-import { MainProjectsType } from "@/data/data";
+import { MainProjectsType } from "@/data/dataTypes";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ const MainProjectCard: FC<MainProjectsType> = ({
           height={700}
           className="aspect-video object-cover"
         />
-        <div className="h-18 flex flex-col px-4 pb-3">
+        <div className="flex flex-col px-4 pb-4">
           <div className="flex font-bold">{title}</div>
           <div className="text-info flex text-xs text-[#65656a]">
             {techStacks}

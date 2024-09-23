@@ -1,19 +1,14 @@
 import Image from "next/image";
-import { TechIconType } from "@/data/data";
+import { TechIconType, TechCardProps } from "@/data/dataTypes";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FC } from "react";
 import { Button } from "../ui/button";
 
-interface TechCardProps {
-  iterableArray: Array<TechIconType>;
-  cardTitle: string;
-}
-
 const TechCard: FC<TechCardProps> = ({ iterableArray, cardTitle }) => {
   return (
-    <Card className="h-fit w-full border-none shadow-md md:h-[358px] lg:h-[300px] xl:h-[242px]">
+    <Card className="h-fit w-full border-none shadow-none md:h-[358px] lg:h-[300px] xl:h-[242px]">
       <CardHeader className="p-4">
-        <CardTitle className="text-center text-lg text-[#65656a]">
+        <CardTitle className="text-center text-lg text-[#616161]">
           {cardTitle}
         </CardTitle>
       </CardHeader>
@@ -23,7 +18,7 @@ const TechCard: FC<TechCardProps> = ({ iterableArray, cardTitle }) => {
             <div key={id} className="flex flex-col items-center gap-2">
               <Button
                 variant={"outline"}
-                className="flex h-10 w-28 items-center justify-center gap-2 border border-gray-200 shadow-none hover:bg-[#fafbfc]"
+                className="flex h-10 w-28 items-center justify-center gap-2 bg-[#fafafa] shadow-none hover:bg-white hover:shadow-md"
               >
                 <Image
                   src={`/techIcons/${imgSrc}`}
@@ -31,7 +26,9 @@ const TechCard: FC<TechCardProps> = ({ iterableArray, cardTitle }) => {
                   width={22}
                   height={22}
                 />
-                <span className="text-xs text-[#3c3c43]">{title}</span>
+                <span className="text-xs font-semibold text-[#242424]">
+                  {title}
+                </span>
               </Button>
             </div>
           );

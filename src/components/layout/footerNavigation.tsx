@@ -1,10 +1,8 @@
 import React, { FC } from "react";
-import { Github, Linkedin, Twitter } from "lucide-react";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { socialIcons } from "@/data/data";
-import { cn } from "@/lib/utils";
+import { socialIcons } from "@/data/socialIcons";
+import { Copyright } from "lucide-react";
 
 const FooterNavigation: FC = () => {
   return (
@@ -19,20 +17,21 @@ const FooterNavigation: FC = () => {
         <div className="flex flex-row items-center justify-center gap-5">
           {socialIcons.map(({ id, imgSrc, altText, bgColor, href }) => {
             return (
-              <div key={id} className="rounded-full border p-[2px] shadow-md">
-                <Link
-                  href={href || "/"}
-                  target="_blank"
-                  className={`flex h-7 w-7 items-center justify-center rounded-full ${bgColor} hover:scale-95`}
-                >
-                  <Image
-                    src={`/socials/${imgSrc}`}
-                    alt={altText}
-                    width={18}
-                    height={18}
-                  />
-                </Link>
-              </div>
+              // <div key={id} className="rounded-full border p-[2px] shadow-md">
+              <Link
+                key={id}
+                href={href || "/"}
+                target="_blank"
+                // className={`flex h-7 w-7 items-center justify-center rounded-full ${bgColor} hover:scale-95`}
+              >
+                <Image
+                  src={`/socials/${imgSrc}`}
+                  alt={altText}
+                  width={18}
+                  height={18}
+                />
+              </Link>
+              // </div>
             );
           })}
         </div>
@@ -47,12 +46,10 @@ const FooterNavigation: FC = () => {
           <p className="text-center text-xs">Source Code</p>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center md:flex-row md:gap-1">
+      <div className="flex items-center justify-center gap-1">
+        <Copyright className="pt-[2px]" size={15} strokeWidth={1.5} />
         <p className="text-center">
-          &copy; Copyright {Date().toString().slice(11, 15)}
-        </p>
-        <p className="text-center md:flex md:items-center md:justify-center md:gap-1">
-          <span className="hidden md:block">|</span>All Rights Reserved
+          {Date().toString().slice(11, 15)} All Rights Reserved
         </p>
       </div>
       <div>

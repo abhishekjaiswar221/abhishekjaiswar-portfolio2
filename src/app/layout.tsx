@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "@/styles/globals.css";
 import HeaderNavigation from "@/components/layout/headerNavigation";
 import FooterNavigation from "@/components/layout/footerNavigation";
 import { cn } from "@/lib/utils";
 import NextTopLoader from "nextjs-toploader";
 
-const inter = Inter({ subsets: ["latin"] });
+const noto_sans = Noto_Sans({ subsets: ["latin"], weight: "400" });
 export const runtime: "edge" = "edge";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "h-full")}>
+      <body className={cn(noto_sans.className, "h-full")}>
         <div className="flex h-full flex-col items-center">
           <NextTopLoader
             color="#242424"
