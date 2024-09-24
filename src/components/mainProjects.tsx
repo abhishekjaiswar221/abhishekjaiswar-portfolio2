@@ -19,8 +19,8 @@ const MainProjects: FC = () => {
             altText,
             title,
             techStacks,
-            githubLink,
-            liveLink,
+            github,
+            live,
           }: MainProjectsType) => {
             return (
               <MainProjectCard
@@ -30,8 +30,8 @@ const MainProjects: FC = () => {
                 altText={altText}
                 title={title}
                 techStacks={techStacks}
-                githubLink={githubLink}
-                liveLink={liveLink}
+                github={github}
+                live={live}
               />
             );
           }

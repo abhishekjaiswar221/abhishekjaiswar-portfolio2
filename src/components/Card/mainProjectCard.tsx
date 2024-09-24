@@ -11,11 +11,11 @@ const MainProjectCard: FC<MainProjectsType> = ({
   altText,
   title,
   techStacks,
-  githubLink,
-  liveLink,
+  github,
+  live,
 }) => {
   return (
-    <Link key={id} target="_blank" href={liveLink || "/"}>
+    <Link key={id} target="_blank" href={live || github || "/"}>
       <div className="flex flex-col gap-3 overflow-hidden overflow-ellipsis rounded-lg border bg-white text-[#3c3c43]">
         <Image
           src={`/projects/${imgSrc}`}
